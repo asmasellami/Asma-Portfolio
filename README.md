@@ -6,7 +6,6 @@ Bienvenue sur mon portfolio GitHub ! Je suis **Asma Sellami**, étudiante en 2è
 ## 🔹 Contact
 
 📧 **Email :** Asma.SELLAMI@esprit.tn  
-📱 **Téléphone :** +216 96 943 934  
 🔗 **LinkedIn :** [Asma Sellami](https://www.linkedin.com/in/asma-sellami/)  
 
 ---
