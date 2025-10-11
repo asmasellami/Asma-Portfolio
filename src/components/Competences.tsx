@@ -126,8 +126,8 @@ const Competences = () => {
   {
     category: "Framework",
     skills: [
-      { name: "Angular", image: imgANGULAR, level: "Avancé" },
-      { name: "Spring Boot", image: imgSPRING, level: "Avancé" },
+      { name: "Angular", image: imgANGULAR, level: "Intermédiaire" },
+      { name: "Spring Boot", image: imgSPRING, level: "Intermédiaire" },
       { name: "Symfony", image: imgSYMFONY, level: "Intermédiaire" },
       { name: "Flutter", image: imgFLUTTER, level: "Intermédiaire" },
       { name: "FlutterFlow", image: imgFLUTTERFLOW, level: "Intermédiaire" },
@@ -138,7 +138,7 @@ const Competences = () => {
   {
     category: "Base de données",
     skills: [
-      { name: "MySQL", image: imgSQL, level: "Avancé" },
+      { name: "MySQL", image: imgSQL, level: "Intermédiaire" },
       { name: "MongoDB", image: imgMONGODB, level: "Intermédiaire" },
       { name: "Firebase", image: imgFIREBASE, level: "Intermédiaire" }
     ]
