@@ -1,4 +1,6 @@
 import Title from "./Title"
+import { useContext } from "react";
+import { LanguageContext } from "../i18n/LanguageContext";
 import img1 from '../assets/projects/1.png';
 import img2 from '../assets/projects/2.png';
 import img3 from '../assets/projects/work.png';
@@ -7,8 +9,8 @@ import { Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Crypto Platform ",
-    description: "Application web et mobile pour visualiser et analyser les crypto-monnaies, intégrant un chatbot intelligent. Gestion des utilisateurs, alertes personnalisées et notifications en temps réel.",
+        titleKey: "projects.1.title",
+        descriptionKey: "projects.1.desc",
     technologies: ["Angular", "Flutter", "Spring Boot", "MySQL", "Flask"],
     // demoLink: "#",
     repoLink: "https://github.com/asmasellami/Crypto-Platform",
@@ -16,8 +18,8 @@ const projects = [
   },
   {
     id: 2,
-    title: "Chatbot Interne",
-    description: "Chatbot interne pour gérer les documents et automatiser les réponses aux questions des employés. Dashboard admin pour gérer intents, utilisateurs et fichiers.",
+        titleKey: "projects.2.title",
+        descriptionKey: "projects.2.desc",
     technologies: ["Angular", "Spring Boot", "Flask", "MySQL"],
     //demoLink: "#",
     repoLink: "https://github.com/asmasellami/Chatbot",
@@ -25,8 +27,8 @@ const projects = [
   },
   {
     id: 3,
-    title: "Gestion des Ressources Humaines",
-    description: "Application web pour gérer les employés, événements, formations et projets. Inclut authentification sécurisée, gestion des équipes, systèmes de feedback et outils RH avancés.",
+        titleKey: "projects.3.title",
+        descriptionKey: "projects.3.desc",
     technologies: ["Symfony", "MySQL", "JavaScript", "Bootstrap"],
     //demoLink: "#",
     repoLink: "https://github.com/asmasellami/PIDevWorksphereWeb",
@@ -34,8 +36,8 @@ const projects = [
   },
   {
     id: 4,
-    title: "Gestion des Stagiaires",
-    description: "Application web pour centraliser la gestion des stagiaires et des demandes de stage, avec suivi et notifications automatiques.",
+        titleKey: "projects.4.title",
+        descriptionKey: "projects.4.desc",
     technologies: ["Angular", ".NET", "MySQL"],
     //demoLink: "#",
     repoLink: "https://github.com/asmasellami/Gestion-Stagiaire",
@@ -44,25 +46,27 @@ const projects = [
 ];
 
 const Projects = () => {
+        const langCtx = useContext(LanguageContext);
+        const t = langCtx?.t ?? ((s: string) => s);
     return (
         <div className="mt-10" id="Projects">
-            <Title title="Mes Projets" />
+                        <Title title={t("projects.title")} />
             <div className="grid md:grid-cols-3 gap-4">
                 {projects.map((project) => (
                     <div key={project.id} className="bg-base-300 p-5 rounded-xl shadow-lg flex flex-col h-full">
                         <div className="flex-shrink-0">
                             <img
-                                src={project.image}
-                                alt={project.title}
+                                                                src={project.image}
+                                                                alt={t(project.titleKey)}
                                 className="w-full rounded-xl h-56 object-cover"
                             />
                         </div>
                         <div className="flex-grow flex flex-col">
                             <div className="flex-grow">
                                 <h1 className="my-2 font-bold">
-                                    {project.title}
+                                                                        {t(project.titleKey)}
                                 </h1>
-                                <p className="text-sm">{project.description}</p>
+                                                                <p className="text-sm">{t(project.descriptionKey)}</p>
                             </div>
                             
                             <div className="flex flex-wrap gap-2 my-3">

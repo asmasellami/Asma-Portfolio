@@ -1,6 +1,7 @@
 import Title from "./Title";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { LanguageContext } from "../i18n/LanguageContext";
 
 // Importez vos images comme dans Experiences.tsx
 import imgPYTHON from "../assets/techno/python.png";
@@ -24,6 +25,8 @@ import imgFLUTTERFLOW from "../assets/techno/flow.jfif";
 
 const Competences = () => {
     const [isMounted, setIsMounted] = useState(false);
+    const langCtx = useContext(LanguageContext);
+    const t = langCtx?.t ?? ((s: string) => s);
 
     useEffect(() => {
         setIsMounted(true);
@@ -112,42 +115,42 @@ const Competences = () => {
     ];
  */
 
-    const competences = [
+        const competences = [
   {
-    category: "Langages de programmation",
+        category: t("skills.cat.languages"),
     skills: [
-      { name: "Java", image: imgJAVA, level: "Intermédiaire" },
-      { name: "JavaScript", image: imgJS, level: "Intermédiaire" },
-      { name: "TypeScript", image: imgTS, level: "Intermédiaire" },
-      { name: "PHP", image: imgPHP, level: "Intermédiaire" },
-      { name: "Python", image: imgPYTHON, level: "Intermédiaire" }
+            { name: "Java", image: imgJAVA, level: t("skills.level.intermediate") },
+            { name: "JavaScript", image: imgJS, level: t("skills.level.intermediate") },
+            { name: "TypeScript", image: imgTS, level: t("skills.level.intermediate") },
+            { name: "PHP", image: imgPHP, level: t("skills.level.intermediate") },
+            { name: "Python", image: imgPYTHON, level: t("skills.level.intermediate") }
     ]
   },
   {
-    category: "Framework",
+        category: t("skills.cat.frameworks"),
     skills: [
-      { name: "Angular", image: imgANGULAR, level: "Intermédiaire" },
-      { name: "Spring Boot", image: imgSPRING, level: "Intermédiaire" },
-      { name: "Symfony", image: imgSYMFONY, level: "Intermédiaire" },
-      { name: "Flutter", image: imgFLUTTER, level: "Intermédiaire" },
-      { name: "FlutterFlow", image: imgFLUTTERFLOW, level: "Intermédiaire" },
-      { name: "Django", image: imgDJANGO, level: "Intermédiaire" },
-      { name: ".NET", image: imgDOTNET, level: "Intermédiaire" }
+            { name: "Angular", image: imgANGULAR, level: t("skills.level.intermediate") },
+            { name: "Spring Boot", image: imgSPRING, level: t("skills.level.intermediate") },
+            { name: "Symfony", image: imgSYMFONY, level: t("skills.level.intermediate") },
+            { name: "Flutter", image: imgFLUTTER, level: t("skills.level.intermediate") },
+            { name: "FlutterFlow", image: imgFLUTTERFLOW, level: t("skills.level.intermediate") },
+            { name: "Django", image: imgDJANGO, level: t("skills.level.intermediate") },
+            { name: ".NET", image: imgDOTNET, level: t("skills.level.intermediate") }
     ]
   },
   {
-    category: "Base de données",
+        category: t("skills.cat.databases"),
     skills: [
-      { name: "MySQL", image: imgSQL, level: "Intermédiaire" },
-      { name: "MongoDB", image: imgMONGODB, level: "Intermédiaire" },
-      { name: "Firebase", image: imgFIREBASE, level: "Intermédiaire" }
+            { name: "MySQL", image: imgSQL, level: t("skills.level.intermediate") },
+            { name: "MongoDB", image: imgMONGODB, level: t("skills.level.intermediate") },
+            { name: "Firebase", image: imgFIREBASE, level: t("skills.level.intermediate") }
     ]
   },
   {
-    category: "Outils",
+        category: t("skills.cat.tools"),
     skills: [
-      { name: "Git", image: imgGIT, level: "Intermédiaire" },
-      { name: "GitHub", image: imgGITHUB, level: "Intermédiaire" },
+            { name: "Git", image: imgGIT, level: t("skills.level.intermediate") },
+            { name: "GitHub", image: imgGITHUB, level: t("skills.level.intermediate") },
     ]
   },
   /* {
@@ -164,7 +167,7 @@ const Competences = () => {
     return (
     <div id="Competences" className="bg-base-100 p-10 mb-10 md:mb-32"> {/* Changé de bg-base-300 à bg-base-100 */}
         <div className="max-w-6xl mx-auto">
-            <Title title="Mes Compétences" />
+            <Title title={t("skills.title")} />
             <br /><br />
 
             <motion.div
@@ -199,8 +202,8 @@ const Competences = () => {
                                             <div 
                                                 className="h-2 rounded-full bg-accent" 
                                                 style={{ 
-                                                    width: skill.level === "Avancé" ? "90%" : 
-                                                           skill.level === "Intermédiaire" ? "65%" : "40%"
+                                                    width: skill.level === t("skills.level.advanced") ? "90%" : 
+                                                           skill.level === t("skills.level.intermediate") ? "65%" : "40%"
                                                 }}
                                             ></div>
                                         </div>

@@ -1,13 +1,16 @@
 import Title from "./Title";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
 import emailjs from "@emailjs/browser";
+import { LanguageContext } from "../i18n/LanguageContext";
 
 const Contact = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const form = useRef<HTMLFormElement>(null);
+  const langCtx = useContext(LanguageContext);
+  const t = langCtx?.t ?? ((s: string) => s);
 
   useEffect(() => {
     setIsMounted(true);
@@ -52,7 +55,7 @@ const Contact = () => {
   return (
     <div id="Contact" className="bg-base-300 p-10 mb-10 md:mb-32">
       <div className="max-w-6xl mx-auto">
-        <Title title="Contactez-moi" />
+  <Title title={t("contact.title")} />
         <br />
 
         <motion.div
@@ -66,12 +69,12 @@ const Contact = () => {
             className="w-full md:w-1/2 bg-base-100 p-6 rounded-xl shadow-lg"
             variants={itemVariants}
           >
-            <h2 className="text-2xl font-bold mb-6">Mes coordonnées</h2>
+            <h2 className="text-2xl font-bold mb-6">{t("contact.info")}</h2>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <Mail className="text-accent mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold">Email</h3>
+                  <h3 className="font-semibold">{t("contact.email")}</h3>
                   <p className="text-base-content/80">
                     asma.sellami@esprit.tn
                   </p>
@@ -81,7 +84,7 @@ const Contact = () => {
               <div className="flex items-start gap-4">
                 <Phone className="text-accent mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold">Téléphone</h3>
+                  <h3 className="font-semibold">{t("contact.phone")}</h3>
                   <p className="text-base-content/80">+216 96 943 934</p>
                 </div>
               </div>
@@ -89,8 +92,8 @@ const Contact = () => {
               <div className="flex items-start gap-4">
                 <MapPin className="text-accent mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold">Localisation</h3>
-                  <p className="text-base-content/80">Tunis, Tunisie</p>
+                  <h3 className="font-semibold">{t("contact.location")}</h3>
+                  <p className="text-base-content/80">{t("contact.location.value")}</p>
                 </div>
               </div>
             </div>
@@ -101,17 +104,17 @@ const Contact = () => {
             className="w-full md:w-1/2 bg-base-100 p-6 rounded-xl shadow-lg"
             variants={itemVariants}
           >
-            <h2 className="text-2xl font-bold mb-6">Envoyez-moi un message</h2>
+            <h2 className="text-2xl font-bold mb-6">{t("contact.form.title")}</h2>
 
             <form ref={form} onSubmit={sendEmail} className="space-y-4">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Nom complet</span>
+                  <span className="label-text">{t("contact.form.fullname")}</span>
                 </label>
                 <input
                   type="text"
                   name="user_name"
-                  placeholder="Votre nom"
+                  placeholder={t("contact.form.fullname.placeholder")}
                   className="input input-bordered w-full"
                   required
                 />
@@ -119,12 +122,12 @@ const Contact = () => {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text">{t("contact.form.email")}</span>
                 </label>
                 <input
                   type="email"
                   name="user_email"
-                  placeholder="Votre email"
+                  placeholder={t("contact.form.email.placeholder")}
                   className="input input-bordered w-full"
                   required
                 />
@@ -132,18 +135,18 @@ const Contact = () => {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Message</span>
+                  <span className="label-text">{t("contact.form.message")}</span>
                 </label>
                 <textarea
                   name="message"
                   className="textarea textarea-bordered h-32"
-                  placeholder="Votre message"
+                  placeholder={t("contact.form.message.placeholder")}
                   required
                 ></textarea>
               </div>
 
               <button type="submit" className="btn btn-accent w-full">
-                Envoyer le message
+                {t("contact.form.submit")}
               </button>
 
            {isSent && (
@@ -166,7 +169,7 @@ const Contact = () => {
           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
         />
       </svg>
-      <span>Message envoyé avec succès ! 💌</span>
+  <span>{t("contact.form.success")}</span>
     </div>
   </motion.div>
 )}

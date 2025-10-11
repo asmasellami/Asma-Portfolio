@@ -1,8 +1,9 @@
 import Title from "./Title";
-import img from '../assets/asma_img2.jpg';
+import img from '../assets/asma_img4.jpg';
 import { BrainCircuit, Sparkles, Github, Linkedin, Laptop,  Rocket } from "lucide-react";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { LanguageContext } from "../i18n/LanguageContext";
 
 const About = () => {
     const [isMounted, setIsMounted] = useState(false);
@@ -46,10 +47,12 @@ const About = () => {
         }
     };
 
+    const langCtx = useContext(LanguageContext);
+    const t = langCtx?.t ?? ((s: string) => s);
     return (
         <div className="bg-base-300 p-10 mb-10 md:mb-32" id="About">
             <div className="max-w-6xl mx-auto">
-                <Title title="À propos de moi" />
+                <Title title={t("about.title")} />
                 <br />
                 <motion.div 
                     className="flex flex-col md:flex-row gap-8 items-center"
@@ -71,7 +74,7 @@ const About = () => {
                             />
                             <div className="absolute -bottom-5 -right-5 bg-accent text-white px-4 py-2 rounded-full shadow-md flex items-center">
                                 <Sparkles className="mr-2" />
-                                <span>Full Stack Developer</span>
+                                <span>{t("about.badge")}</span>
                             </div>
                         </div>
                     </motion.div>
@@ -86,16 +89,12 @@ const About = () => {
                             className="bg-base-100 p-6 rounded-xl shadow-lg"
                             variants={itemVariants}
                         >
-                           <h2 className="text-2xl font-bold mb-4">Mon Parcours</h2>
+                                                        <h2 className="text-2xl font-bold mb-4">{t("about.path")}</h2>
 <p className="text-base-content/90 mb-4">
-  Étudiante en 2<sup>ème</sup> année du cycle ingénieur à ESPRIT, 
-  spécialité <strong>TWIN </strong>(Technologies du Web et de l’Internet), 
-  je suis passionnée par le développement web et les nouvelles technologies.
+    {t("about.bio.1")}
 </p>
 <p className="text-base-content/90 mb-6">
-  Mon objectif est de mettre en pratique mes compétences techniques, 
-  de participer à des projets concrets et d’évoluer dans un environnement stimulant 
-  qui favorise l’apprentissage et l’innovation.
+    {t("about.bio.2")}
 </p>
 
                             
@@ -128,21 +127,21 @@ const About = () => {
                             className="bg-base-100 p-6 rounded-xl shadow-lg"
                             variants={itemVariants}
                         >
-                            <h2 className="text-2xl font-bold mb-4">Mes Forces</h2>
+                                                        <h2 className="text-2xl font-bold mb-4">{t("about.strengths")}</h2>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
   <div className="flex items-start gap-3">
     <BrainCircuit className="text-accent mt-1 flex-shrink-0" />
     <div>
-      <h3 className="font-semibold">Esprit logique et analytique</h3>
-      <p className="text-sm text-base-content/80">Capacité à comprendre et résoudre efficacement les problèmes techniques</p>
+            <h3 className="font-semibold">{t("about.strength.logic")}</h3>
+            <p className="text-sm text-base-content/80">{t("about.strength.logic.desc")}</p>
     </div>
   </div>
 
   <div className="flex items-start gap-3">
     <Laptop className="text-accent mt-1 flex-shrink-0" />
     <div>
-      <h3 className="font-semibold">Passion pour le développement web</h3>
-      <p className="text-sm text-base-content/80">Création d’applications modernes et fonctionnelles avec une attention aux détails</p>
+            <h3 className="font-semibold">{t("about.strength.dev")}</h3>
+            <p className="text-sm text-base-content/80">{t("about.strength.dev.desc")}</p>
     </div>
   </div>
 
@@ -157,8 +156,8 @@ const About = () => {
   <div className="flex items-start gap-3">
     <Rocket className="text-accent mt-1 flex-shrink-0" />
     <div>
-      <h3 className="font-semibold">Motivation et ambition</h3>
-      <p className="text-sm text-base-content/80">Toujours prête à relever de nouveaux défis et à apprendre</p>
+            <h3 className="font-semibold">{t("about.strength.motivation")}</h3>
+            <p className="text-sm text-base-content/80">{t("about.strength.motivation.desc")}</p>
     </div>
   </div>
 

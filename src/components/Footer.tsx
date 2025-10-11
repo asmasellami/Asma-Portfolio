@@ -1,6 +1,10 @@
 import { Container } from "lucide-react"
+import { useContext } from "react";
+import { LanguageContext } from "../i18n/LanguageContext";
 
 const Footer = () => {
+    const langCtx = useContext(LanguageContext);
+    const t = langCtx?.t ?? ((s: string) => s);
     return (
         <footer className="footer footer-center  p-10">
             <aside>
@@ -10,7 +14,7 @@ const Footer = () => {
                     Asma
                     <span className="text-accent">Sellami</span>
                 </p>
-                <p>Copyright © {new Date().getFullYear()} -  Tous droits réservés</p>
+                <p>Copyright © {new Date().getFullYear()} -  {t("footer.rights")}</p>
             </aside>
             
         </footer>
