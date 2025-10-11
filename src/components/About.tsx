@@ -1,5 +1,5 @@
 import Title from "./Title";
-import img from '../assets/img1.jpeg';
+import img from '../assets/asma_img2.jpg';
 import { BrainCircuit, Sparkles, Github, Linkedin, Laptop,  Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -65,13 +65,13 @@ const About = () => {
                         <div className="relative w-full h-[26rem] flex items-center justify-center">
                             <img 
                                 src={img} 
-                                alt="Nourhen Ferjani" 
+                                alt="Asma Sellami" 
                                 className="w-full h-full object-cover rounded-2xl shadow-2xl border-4 border-accent"
                                 style={{ objectPosition: "center center" }}
                             />
                             <div className="absolute -bottom-5 -right-5 bg-accent text-white px-4 py-2 rounded-full shadow-md flex items-center">
                                 <Sparkles className="mr-2" />
-                                <span>Data Scientist</span>
+                                <span>Full Stack Developer</span>
                             </div>
                         </div>
                     </motion.div>
@@ -90,8 +90,7 @@ const About = () => {
 <p className="text-base-content/90 mb-4">
   Étudiante en 2<sup>ème</sup> année du cycle ingénieur à ESPRIT, 
   spécialité <strong>TWIN </strong>(Technologies du Web et de l’Internet), 
-  je suis passionnée par le développement web et les nouvelles technologies. 
-  Curieuse et rigoureuse, j’aime concevoir des applications modernes et utiles.
+  je suis passionnée par le développement web et les nouvelles technologies.
 </p>
 <p className="text-base-content/90 mb-6">
   Mon objectif est de mettre en pratique mes compétences techniques, 

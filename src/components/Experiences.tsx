@@ -16,7 +16,7 @@ const experiences = [
       "Développement d’un chatbot interne pour la gestion documentaire et l’automatisation des réponses aux questions des employés, avec un système de NLP pour améliorer la qualité des réponses.",
       "Développement back-end avec Flask et Spring Boot, front-end avec Angular et gestion de la base de données MySQL."
     ],
-    image: onetech, // Assure-toi d'importer l'image correspondante
+    image: onetech, 
   },
   {
     id: 2,
@@ -76,7 +76,7 @@ const Experiences = () => {
                                         <img
                                             src={experience.image}
                                             alt={experience.company}
-                                            className="object-cover h-14 w-14 rounded-lg"
+                                            className="object-cover h-14 w-16 rounded-lg"
                                         />
                                         <div>
                                             <h3 className="text-xl font-bold">

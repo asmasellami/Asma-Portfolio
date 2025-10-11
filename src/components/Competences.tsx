@@ -4,33 +4,22 @@ import { useEffect, useState } from "react";
 
 // Importez vos images comme dans Experiences.tsx
 import imgPYTHON from "../assets/techno/python.png";
-// import imgR from "../assets/techno/R.png";
 import imgSQL from "../assets/techno/sql.png";
-// import imgPOWERBI from "../assets/techno/powerBi.png";
-/* import imgTENSORFLOW from "../assets/techno/tensorflow.png";
-import imgHADOOP from "../assets/techno/hadd.png"; */
-import imgDOCKER from "../assets/techno/dockerr.png";
-//import imgGCP from "../assets/techno/gcp.png";
 import imgJAVA from "../assets/techno/java.png";
 import imgPHP from "../assets/techno/php.png";
 import imgJS from "../assets/techno/javascript.png";
 import imgMONGODB from "../assets/techno/mongodb.png";
-//import imgPOSTGRESQL from "../assets/techno/postgresql.png";
-import imgFLASK from "../assets/techno/flask.png";
-//import imgFASTAPI from "../assets/techno/fastapi.png";
 import imgSPRING from "../assets/techno/Spring.png";
 import imgSYMFONY from "../assets/techno/symfony.png";
 import imgFLUTTER from "../assets/techno/flutter.png";
-import imgMLFLOW from "../assets/techno/mlflow.png";
-import imgJENKINS from "../assets/techno/jenkins.png";
 import imgTS from "../assets/techno/ts.png";
-import imgANGULAR from "../assets/techno/ts.png";
-import imgDJANGO from "../assets/techno/ts.png";
-import imgDOTNET from "../assets/techno/ts.png";
-import imgFIREBASE from "../assets/techno/ts.png";
-import imgGIT from "../assets/techno/ts.png";
-import imgGITHUB from "../assets/techno/ts.png";
-import imgFLUTTERFLOW from "../assets/techno/ts.png";
+import imgANGULAR from "../assets/techno/angular.png";
+import imgDJANGO from "../assets/techno/dj.svg";
+import imgDOTNET from "../assets/techno/net.png";
+import imgFIREBASE from "../assets/techno/firebase.png";
+import imgGIT from "../assets/techno/git.png";
+import imgGITHUB from "../assets/techno/github.png";
+import imgFLUTTERFLOW from "../assets/techno/flow.jfif";
 
 
 const Competences = () => {
@@ -127,8 +116,8 @@ const Competences = () => {
   {
     category: "Langages de programmation",
     skills: [
-      { name: "Java", image: imgJAVA, level: "Avancé" },
-      { name: "JavaScript", image: imgJS, level: "Avancé" },
+      { name: "Java", image: imgJAVA, level: "Intermédiaire" },
+      { name: "JavaScript", image: imgJS, level: "Intermédiaire" },
       { name: "TypeScript", image: imgTS, level: "Intermédiaire" },
       { name: "PHP", image: imgPHP, level: "Intermédiaire" },
       { name: "Python", image: imgPYTHON, level: "Intermédiaire" }
@@ -159,10 +148,9 @@ const Competences = () => {
     skills: [
       { name: "Git", image: imgGIT, level: "Intermédiaire" },
       { name: "GitHub", image: imgGITHUB, level: "Intermédiaire" },
-      { name: "Flask", image: imgFLASK, level: "Intermédiaire" }
     ]
   },
-  {
+  /* {
     category: "MLOps & CI/CD",
     skills: [
       { name: "Docker", image: imgDOCKER, level: "Intermédiaire" },
@@ -170,7 +158,7 @@ const Competences = () => {
       { name: "Jenkins", image: imgJENKINS, level: "Intermédiaire" },
       { name: "Makefile", image: imgPYTHON, level: "Intermédiaire" }
     ]
-  }
+  } */
 ];
 
     return (

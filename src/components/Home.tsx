@@ -1,6 +1,6 @@
 import { Mail, Eye } from "lucide-react";
-import img from '../assets/img.jpeg';
-import cvPdf from '../assets/AsmaSellamiCV.pdf'; // Import direct du PDF
+import img from '../assets/asma_img.jpg';
+import cvPdf from '../assets/AsmaSellamiCV.pdf'; 
 
 const Home = () => {
     // Fonction pour ouvrir l'aperçu du CV
