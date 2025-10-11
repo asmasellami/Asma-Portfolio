@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      // Fallback SPA pour GitHub Pages
+      (function() {
+        var basePath = "/Asma-Portfolio";
+        var path = location.pathname;
+        // Enlève le prefix du repo si présent
+        if (path.startsWith(basePath)) {
+          path = path.slice(basePath.length);
+        }
+        var target = basePath + "/" + (path + location.search + location.hash).replace(/^\/+/, "");
+        // Redirige tout vers l'index (le router gérera la route)
+        window.location.replace(basePath + "/index.html" + location.search + location.hash);
+      })();
+    </script>
+    <noscript>
+      Cette application nécessite JavaScript. <a href="/Asma-Portfolio/">Revenir à l’accueil</a>.
+    </noscript>
+  </head>
+  <body></body>
+</html>
