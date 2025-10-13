@@ -5,7 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // IMPORTANT pour GitHub Pages (projet publié sous /Asma-Portfolio/)
-  base: '/Asma-Portfolio/',
+ /*  base: '/Asma-Portfolio/', */
+     base: '/',
   // Optionnel: Vite sort déjà dans "dist" par défaut
   build: {
     outDir: 'dist',
