@@ -198,7 +198,7 @@ const Competences = () => {
                                     </div>
                                     <div className="flex-1">
                                         <h3 className="font-medium text-base-content">{skill.name}</h3>
-                                        <div className="w-full bg-base-100 rounded-full h-2 mt-1"> {/* Changé de bg-base-200 à bg-base-100 */}
+                                       {/*  <div className="w-full bg-base-100 rounded-full h-2 mt-1"> {}
                                             <div 
                                                 className="h-2 rounded-full bg-accent" 
                                                 style={{ 
@@ -206,9 +206,9 @@ const Competences = () => {
                                                            skill.level === t("skills.level.intermediate") ? "65%" : "40%"
                                                 }}
                                             ></div>
-                                        </div>
+                                        </div> */}
                                     </div>
-                                    <span className="text-sm text-base-content/70">{skill.level}</span>
+                                  {/*   {<span className="text-sm text-base-content/70">{skill.level}</span> } */}
                                 </div>
                             ))}
                         </div>
