@@ -97,6 +97,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "projects.4.title": "Gestion des Stagiaires",
     "projects.4.desc":
       "Application web pour centraliser la gestion des stagiaires et des demandes de stage, avec suivi et notifications automatiques.",
+    "projects.5.title": "DeepSkyn – Plateforme IA de Dermatologie",
+    "projects.5.desc":
+      "Plateforme IA d'analyse cutanée avec analyse photo, rapports personnalisés et suivi avant/après. Recommandations skincare, chatbot IA, suivi des habitudes, paiement Stripe et authentification sécurisée (JWT, Google OAuth). Pipeline DevOps complet avec Jenkins, SonarQube, Docker, Kubernetes, Argo CD, Prometheus et Grafana.",
 
     // Contact
     "contact.title": "Contactez-moi",
@@ -212,6 +215,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "projects.4.title": "Internship Management",
     "projects.4.desc":
       "Web application to centralize the management of interns and internship requests, with tracking and automatic notifications.",
+    "projects.5.title": "DeepSkyn – AI Dermatology Platform",
+    "projects.5.desc":
+      "AI-powered skin analysis platform with photo analysis, personalized reports and before/after tracking. Includes skincare recommendations, AI chatbot, habit tracking, Stripe payment and secure authentication (JWT, Google OAuth). Complete DevOps pipeline with Jenkins, SonarQube, Docker, Kubernetes, Argo CD, Prometheus and Grafana.",
 
     // Contact
     "contact.title": "Contact me",

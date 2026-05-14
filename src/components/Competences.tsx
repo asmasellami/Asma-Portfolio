@@ -21,6 +21,15 @@ import imgFIREBASE from "../assets/techno/firebase.png";
 import imgGIT from "../assets/techno/git.png";
 import imgGITHUB from "../assets/techno/github.png";
 import imgFLUTTERFLOW from "../assets/techno/flow.jfif";
+import imgPOSTGRESQL from "../assets/techno/postgresql.png";
+import imgREACT from "../assets/techno/react.png";
+import imgDOCKER from "../assets/techno/docker.png";
+import imgJENKINS from "../assets/techno/jenkins.png";
+import imgNESTJS from "../assets/techno/nestjs.png";
+import imgSONARQUBE from "../assets/techno/sonarqube.png";
+import imgPROMETHEUS from "../assets/techno/prometheus.png";
+import imgGRAFANA from "../assets/techno/grafana.jfif";
+import imgKUBERNETES from "../assets/techno/kubernetes.png";
 
 
 const Competences = () => {
@@ -130,12 +139,14 @@ const Competences = () => {
         category: t("skills.cat.frameworks"),
     skills: [
             { name: "Angular", image: imgANGULAR, level: t("skills.level.intermediate") },
+            { name: "React", image: imgREACT, level: t("skills.level.intermediate") },
             { name: "Spring Boot", image: imgSPRING, level: t("skills.level.intermediate") },
             { name: "Symfony", image: imgSYMFONY, level: t("skills.level.intermediate") },
             { name: "Flutter", image: imgFLUTTER, level: t("skills.level.intermediate") },
             { name: "FlutterFlow", image: imgFLUTTERFLOW, level: t("skills.level.intermediate") },
             { name: "Django", image: imgDJANGO, level: t("skills.level.intermediate") },
-            { name: ".NET", image: imgDOTNET, level: t("skills.level.intermediate") }
+            { name: ".NET", image: imgDOTNET, level: t("skills.level.intermediate") },
+            { name: "NestJS", image: imgNESTJS, level: t("skills.level.intermediate") }
     ]
   },
   {
@@ -143,6 +154,7 @@ const Competences = () => {
     skills: [
             { name: "MySQL", image: imgSQL, level: t("skills.level.intermediate") },
             { name: "MongoDB", image: imgMONGODB, level: t("skills.level.intermediate") },
+            { name: "PostgreSQL", image: imgPOSTGRESQL, level: t("skills.level.intermediate") },
             { name: "Firebase", image: imgFIREBASE, level: t("skills.level.intermediate") }
     ]
   },
@@ -151,6 +163,12 @@ const Competences = () => {
     skills: [
             { name: "Git", image: imgGIT, level: t("skills.level.intermediate") },
             { name: "GitHub", image: imgGITHUB, level: t("skills.level.intermediate") },
+            { name: "Docker", image: imgDOCKER, level: t("skills.level.intermediate") },
+            { name: "Kubernetes", image: imgKUBERNETES, level: t("skills.level.intermediate") },
+            { name: "Jenkins", image: imgJENKINS, level: t("skills.level.intermediate") },
+            { name: "SonarQube", image: imgSONARQUBE, level: t("skills.level.intermediate") },
+            { name: "Prometheus", image: imgPROMETHEUS, level: t("skills.level.intermediate") },
+            { name: "Grafana", image: imgGRAFANA, level: t("skills.level.intermediate") }
     ]
   },
   /* {
@@ -186,9 +204,9 @@ const Competences = () => {
                         <h2 className="text-xl font-bold mb-6 pb-2 border-b border-accent text-accent">
                             {competence.category}
                         </h2>
-                        <div className="space-y-4">
+                        <div className="grid grid-cols-2 gap-4">
                             {competence.skills.map((skill, skillIndex) => (
-                                <div key={skillIndex} className="flex items-center gap-4">
+                                <div key={skillIndex} className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-base-200 hover:bg-base-100 transition-colors">
                                     <div className="w-12 h-12 p-1 rounded-full bg-accent/20 flex items-center justify-center"> 
                                         <img 
                                             src={skill.image} 
@@ -196,8 +214,8 @@ const Competences = () => {
                                             className="w-8 h-8 object-contain"
                                         />
                                     </div>
-                                    <div className="flex-1">
-                                        <h3 className="font-medium text-base-content">{skill.name}</h3>
+                                    <div className="text-center">
+                                        <h3 className="font-medium text-sm text-base-content">{skill.name}</h3>
                                        {/*  <div className="w-full bg-base-100 rounded-full h-2 mt-1"> {}
                                             <div 
                                                 className="h-2 rounded-full bg-accent" 
