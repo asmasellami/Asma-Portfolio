@@ -6,6 +6,7 @@ import img2 from '../assets/projects/2.png';
 import img3 from '../assets/projects/work.png';
 import img4 from '../assets/projects/intern.png';
 import img5 from '../assets/projects/deepskyn.png';
+import img6 from '../assets/projects/mockplatform.png';
 import { Github } from "lucide-react";
 const projects = [
   {
@@ -51,6 +52,14 @@ const projects = [
     technologies: ["React", "TypeScript", "NestJS", "PostgreSQL", "Prisma", "Docker", "Kubernetes"],
     repoLink: "https://github.com/DeepSkyn",
     image: img5,
+    },
+    {
+        id: 6,
+                titleKey: "projects.6.title",
+                descriptionKey: "projects.6.desc",
+        technologies: ["React", "NestJS", "Prisma", "PostgreSQL", "OpenAPI", "Gemini"],
+        repoLink: "#",
+        image: img6,
   }
 ];
 

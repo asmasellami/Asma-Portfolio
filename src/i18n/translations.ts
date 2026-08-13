@@ -30,7 +30,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.path": "Mon Parcours",
     "about.badge": "Full Stack Developer",
     "about.bio.1":
-      "Étudiante en 2ème année du cycle ingénieur à ESPRIT, spécialité TWIN (Technologies du Web et de l’Internet), je suis passionnée par le développement web et les nouvelles technologies.",
+      "Actuellement en dernière année du cycle ingénieur à ESPRIT, spécialité TWIN (Technologies du Web et de l’Internet), passionnée par le développement web, curieuse et rigoureuse. Disponible pour un stage de fin d’études (PFE) de 6 mois à partir de janvier 2027.",
     "about.bio.2":
       "Mon objectif est de mettre en pratique mes compétences techniques, de participer à des projets concrets et d’évoluer dans un environnement stimulant qui favorise l’apprentissage et l’innovation.",
     "about.strengths": "Mes Forces",
@@ -82,6 +82,21 @@ export const translations: Record<Lang, Record<string, string>> = {
     "exp.4.period": "Janvier 2022 – Février 2022",
     "exp.4.d1":
       "Intégration dans l’entreprise, découverte du milieu professionnel et observation du fonctionnement de la banque.",
+    "exp.5.role": "Stage d’été ",
+    "exp.5.company": "One Tech Business Solutions - Tunis",
+    "exp.5.period": "juin 2026 – août 2026",
+    "exp.5.d1":
+      "Conception et développement d’une plateforme web permettant de générer automatiquement des données mockées et de simuler des services backend à partir de spécifications OpenAPI, afin d’aider les équipes Frontend à avancer sans dépendre de l’avancement du Backend.",
+    "exp.5.d2":
+      "Génération automatique et intelligente de données mockées, en analysant la structure des schémas OpenAPI et le contexte des champs pour produire des réponses réalistes sans configuration manuelle.",
+    "exp.5.d3":
+      "Simulation de scénarios d’erreur réalistes (champ requis manquant, format invalide, valeur hors bornes), avec des messages d’erreur reprenant directement les règles métier définies dans la spécification.",
+    "exp.5.d4":
+      "Gestion de scénarios métier multiples par code de statut HTTP, permettant de définir plusieurs réponses nommées pour un même endpoint.",
+    "exp.5.d5":
+      "Intégration de l’intelligence artificielle (API Gemini) pour enrichir automatiquement les champs non déductibles de la spécification OpenAPI et assister la création de scénarios complexes à partir de descriptions en langage naturel.",
+    "exp.5.d6":
+      "Génération d’une page publique unique par spécification OpenAPI, exposant les endpoints, les scénarios disponibles et l’URL de base du serveur simulé, consommable directement par des outils externes (Postman, applications Frontend) sans accès à l’application principale. Développement back-end avec NestJS et Prisma, front-end avec React, base de données PostgreSQL.",
 
     // Projects
     "projects.title": "Mes Projets",
@@ -100,6 +115,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "projects.5.title": "DeepSkyn – Plateforme IA de Dermatologie",
     "projects.5.desc":
       "Plateforme IA d'analyse cutanée avec analyse photo, rapports personnalisés et suivi avant/après. Recommandations skincare, chatbot IA, suivi des habitudes, paiement Stripe et authentification sécurisée (JWT, Google OAuth). Pipeline DevOps complet avec Jenkins, SonarQube, Docker, Kubernetes, Argo CD, Prometheus et Grafana.",
+    "projects.6.title": "Mock API Platform",
+    "projects.6.desc":
+      "Plateforme de génération de Mock APIs à partir de spécifications OpenAPI, avec données réalistes, simulation d’erreurs et enrichissement par l’API Gemini pour améliorer le contenu des réponses et des scénarios de test.",
 
     // Contact
     "contact.title": "Contactez-moi",
@@ -149,7 +167,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.path": "My Journey",
     "about.badge": "Full Stack Developer",
     "about.bio.1":
-      "Second-year engineering student at ESPRIT, majoring in TWIN (Web and Internet Technologies), passionate about web development and new technologies.",
+      "Currently in the final year of the engineering cycle at ESPRIT, specializing in TWIN (Web and Internet Technologies), passionate about web development, curious and thorough. Available for a 6-month end-of-studies internship starting in January 2027.",
     "about.bio.2":
       "My goal is to apply my technical skills, contribute to real-world projects, and grow in a stimulating environment that promotes learning and innovation.",
     "about.strengths": "My Strengths",
@@ -200,6 +218,21 @@ export const translations: Record<Lang, Record<string, string>> = {
     "exp.4.period": "January 2022 – February 2022",
     "exp.4.d1":
       "Integration into the company, discovering the professional environment and observing how the bank operates.",
+    "exp.5.role": "Development of a web platform for generating Mock APIs",
+    "exp.5.company": "One Tech Business Solutions - Tunis",
+    "exp.5.period": "2025",
+    "exp.5.d1":
+      "Designed and developed a web platform that automatically generates mock data and simulates backend services from OpenAPI specifications, helping Frontend teams keep working without waiting for Backend progress.",
+    "exp.5.d2":
+      "Automatic and intelligent mock data generation by analyzing OpenAPI schema structure and field context to produce realistic responses without manual configuration.",
+    "exp.5.d3":
+      "Realistic error scenario simulation (missing required field, invalid format, out-of-range value), with error messages that directly reflect the business rules defined in the specification.",
+    "exp.5.d4":
+      "Management of multiple business scenarios by HTTP status code, allowing multiple named responses for the same endpoint.",
+    "exp.5.d5":
+      "Integration of artificial intelligence (Gemini API) to automatically enrich fields that cannot be inferred from the OpenAPI specification and assist in creating complex scenarios from natural-language descriptions.",
+    "exp.5.d6":
+      "Generation of a unique public page per OpenAPI specification, exposing endpoints, available scenarios, and the mock server base URL, directly consumable by external tools (Postman, Frontend applications) without access to the main application. Back-end development with NestJS and Prisma, front-end with React, PostgreSQL database.",
 
     // Projects
     "projects.title": "My Projects",
@@ -218,6 +251,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "projects.5.title": "DeepSkyn – AI Dermatology Platform",
     "projects.5.desc":
       "AI-powered skin analysis platform with photo analysis, personalized reports and before/after tracking. Includes skincare recommendations, AI chatbot, habit tracking, Stripe payment and secure authentication (JWT, Google OAuth). Complete DevOps pipeline with Jenkins, SonarQube, Docker, Kubernetes, Argo CD, Prometheus and Grafana.",
+    "projects.6.title": "Mock API Platform",
+    "projects.6.desc":
+      "Platform for generating Mock APIs from OpenAPI specifications, with realistic data, error simulation, and Gemini-powered enrichment to improve response content and test scenarios.",
 
     // Contact
     "contact.title": "Contact me",

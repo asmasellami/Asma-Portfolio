@@ -9,6 +9,14 @@ import codix from "../assets/companies/codix.png";
 import bna from "../assets/companies/bna.png";
 
 const experiences = [
+    {
+        id: 5,
+        roleKey: "exp.5.role",
+        companyKey: "exp.5.company",
+        periodKey: "exp.5.period",
+        descriptionKeys: ["exp.5.d1", "exp.5.d2", "exp.5.d3", "exp.5.d4", "exp.5.d5", "exp.5.d6"],
+        image: onetech,
+    },
   {
     id: 1,
     roleKey: "exp.1.role",
