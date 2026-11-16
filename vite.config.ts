@@ -4,10 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // IMPORTANT pour GitHub Pages (projet publié sous /Asma-Portfolio/)
- /*  base: '/Asma-Portfolio/', */
-     base: '/',
-  // Optionnel: Vite sort déjà dans "dist" par défaut
+  // Vercel sert le site à la racine
+  base: '/',
   build: {
     outDir: 'dist',
   },
